@@ -30,7 +30,7 @@
         <h2>Tarefas Pendentes</h2>
 
         <div class="row">
-            <div class="col s12 m6" th:each="task : ${tasks}" >
+            <div class="col s12 m6" th:each="task : ${tasks}">
                 <div class="card">
                     <div class="card-content">
                         <div class="progress">
@@ -44,7 +44,7 @@
                         <a th:href="${'/task/delete/' + task.id}" class="btn red">
                             <i class="material-icons">delete</i>
                         </a>
-                        
+
                     </div>
                 </div>
             </div>
@@ -52,10 +52,10 @@
     </div>
 
     <div class="fixed-action-btn">
-        <a class="btn-floating btn-large blue" title="adicionar tarefa">
-          <i class="large material-icons">add</i>
+        <a href="/task/new" class="btn-floating btn-large blue" title="adicionar tarefa">
+            <i class="large material-icons">add</i>
         </a>
-      </div>
+    </div>
 
 
 </body>
