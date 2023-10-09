@@ -27,7 +27,9 @@
 
         <h2>Cadastrar Tarefa</h2>
 
-        <div class="row">
+        <div class="card">
+            <div class="card-content">
+
             <form class="col s12" th:action="${'/task'}" method="post" th:object="${task}">
                 <div class="row">
                     <div class="input-field col s12">
@@ -57,10 +59,12 @@
                     <span class="helper-text red-text" th:errors="*{score}"></span>
                 </p>
                 
-                <div>
-                    <a href="/task" class="btn grey">cancelar</a>
-                    <button class="btn">cadastrar</button>
-                </div>
+            </div>
+            <div class="card-action right-align">
+                <a href="/task" class="btn grey">cancelar</a>
+                <button class="btn">cadastrar</button>
+            </div>
+
             </form>
         </div>
 
