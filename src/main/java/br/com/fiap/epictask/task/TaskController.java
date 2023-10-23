@@ -72,5 +72,17 @@ public class TaskController {
         return "redirect:/task";
     }
 
+    @GetMapping("/catch/{id}")
+    public String cacthTask(@PathVariable Long id, @AuthenticationPrincipal OAuth2User user){
+        service.cacthTask(id, user);
+        return "redirect:/task";
+    }
+
+    @GetMapping("/drop/{id}")
+    public String dropTask(@PathVariable Long id, @AuthenticationPrincipal OAuth2User user){
+        service.dropTask(id, user);
+        return "redirect:/task";
+    }
+
     
 }
