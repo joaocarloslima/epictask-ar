@@ -60,5 +60,17 @@ public class TaskController {
         return "redirect:/task";
     }
 
+    @GetMapping("/dec/{id}")
+    public String decrement(@PathVariable Long id){
+        service.decrement(id);
+        return "redirect:/task";
+    }
+
+    @GetMapping("/inc/{id}")
+    public String increment(@PathVariable Long id){
+        service.increment(id);
+        return "redirect:/task";
+    }
+
     
 }

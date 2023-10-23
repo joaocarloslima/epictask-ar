@@ -29,6 +29,15 @@
                         <a th:href="${'/task/delete/' + task.id}" class="btn red">
                             <i class="material-icons">delete</i>
                         </a>
+                        <a th:if="${task.status > 0}" th:href="${'/task/dec/' + task.id}" class="btn" title="subtrair status">
+                            <i class="material-icons">remove</i>
+                        </a>
+                        <a th:if="${task.status != 100}" th:href="${'/task/inc/' + task.id}" class="btn" title="somar status">
+                            <i class="material-icons">add</i>
+                        </a>
+                        <a th:href="${'/task/catch/' + task.id}" class="btn purple" title="pegar tarefa">
+                            <i class="material-icons">pan_tool</i>
+                        </a>
 
                     </div>
                 </div>
@@ -45,9 +54,5 @@
 
 </body>
 
-<script>
-    
-
-</script>
 
 </html>
